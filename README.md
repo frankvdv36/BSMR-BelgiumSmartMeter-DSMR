@@ -10,6 +10,7 @@ Voor wie geen SmartMeter heeft is er een simulatie van 20 minuten beschikbaar.
 "telegram20min.txt" is een voorbeeld van een opname van 20 minuten data die ierdere seconde uit een Belgische teller komt. De simulatie komt uit een ESP32 via poort TX0. Dit kan gebruikt worden indien geen teller voor handen is.
 
 DEEL1:
+
 Iedere SmartTeller heeft een P1 aansluiting RJ12 (6 geleiders) waarop onze RPI wordt aangesloten via een kleine aanpassing naar Serial0. Schema zie "Aanpassing P1-RJ12"
 Die data bestaat uit een telegram (iedere seconde) die wordt binnengenomen in een Raspberry Pi via de serial0.
 Het programma "BSMR8.py" verrwerkt deze data. Dit betekent: neemt de nodige data uit de telegram en verwerkt die zodat deze bruikbaar worden om grafieken te maken en belastingen te schakelen.
