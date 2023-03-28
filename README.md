@@ -11,12 +11,14 @@ Voor wie geen SmartMeter heeft is er een simulatie van 20 minuten beschikbaar.
 
 DEEL1:
 
-Iedere SmartTeller heeft een P1 aansluiting RJ12 (6 geleiders) waarop onze RPI wordt aangesloten via een kleine aanpassing naar Serial0. Schema zie "Aanpassing P1-RJ12"
-Die data bestaat uit een telegram (iedere seconde) die wordt binnengenomen in een Raspberry Pi via de serial0.
-Het programma "BSMR8.py" verrwerkt deze data. Dit betekent: neemt de nodige data uit de telegram en verwerkt die zodat deze bruikbaar worden om grafieken te maken en belastingen te schakelen.
 
-Een tweede deel bestaat uit een ESP32 en een Nextion HMI-dispaly die draadloos de nuttige gegevens zichtbaar maaken alook een grafiek rond het kwartierverloop.
-Hiervoor is het Arduino programma "keuken_grafiek_vdv6" en display programma "NewGrafiekNum1PageV2.HMI" van toepassing.
+Iedere SmartTeller heeft een P1 aansluiting RJ12 (6 geleiders) waarop onze RPI wordt aangesloten via een kleine aanpassing naar Serial0. Schema zie "Aanpassing P1-RJ12"
+Die data noemen we een telegram en komt iedere seconde uit de P1 connector met een snelheid 115200. Telegrammen worden binnengenomen in een Raspberry Pi via de serial0. Het programma "BSMR8.py" verrwerkt deze data. Dit betekent: neemt de nodige data uit de telegram en verwerkt die zodat deze bruikbaar worden om grafieken te maken en belastingen te schakelen.
+
+DEEL2:
+
+
+Een tweede deel bestaat uit een ESP32 en een Nextion HMI-dispaly die draadloos de nuttige gegevens zichtbaar maaken alook een grafiek rond het kwartierverloop. Hiervoor is het Arduino programma "keuken_grafiek_vdv6" en display programma "NewGrafiekNum1PageV2.HMI" van toepassing. Het eerste wordt in een ESP32 geplaatst en het tweede is het formateren van de display in de gewenste layout. De display is van het type Nextion NX3224K028. Om dit te doen is een aangepast programma nodig die moet geinstallerd worden van Nextion https://nextion.tech/nextion-editor/#_section1
 
 
 
