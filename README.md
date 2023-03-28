@@ -20,7 +20,8 @@ DEEL2:
 
 Een tweede deel bestaat uit een ESP32 en een Nextion HMI-dispaly die draadloos de nuttige gegevens zichtbaar maaken alook een grafiek rond het kwartierverloop. Hiervoor is het Arduino programma "keuken_grafiek_vdv6" en display programma "NewGrafiekNum1PageV2.HMI" van toepassing. Het eerste wordt in een ESP32 geplaatst en het tweede is het formateren van de display in de gewenste layout. De display is van het type Nextion NX3224K028. Om dit te doen is een aangepast programma nodig die moet geinstallerd worden van Nextion https://nextion.tech/nextion-editor/#_section1
 
-Wie niet wenst te werken met de display kan de grafiek ook bekomen op het scherm van de Raspberry Pi door 
+Wie niet wenst te werken met de display kan de grafiek ook bekomen op het scherm van de Raspberry Pi door "BSMRplotData1.py" te laten lopen. Deze kijkt naar de file "forcast.csv" die "BSMR8.py" genereerde en plot deze op het scherm.
+
 
 
 
