@@ -1,5 +1,8 @@
 # BSMR-BelgiumSmartMeter-DSMR
-De Belgium Smart Meter BSMR, gebaseerd op de Dutch Smart Meter Requirements of DSMR, mits aangepaste parameters. Zie document "e-MUCS_P1_Ed_1_4"
+Dit programma kan gebruikt worden om de data die iedere seconde uit de Vlaamse Fluvius elektronische elektriciteitsteller komt binnen te nemen en de nodige parameters te verwerken.
+Deze data gaan we gebruiken om energiepieken te voorspellen en eventueel in te grijpen om een vermogenpiek te voorkomen. De gegevens worden door een Raspberry Pi binnengenomen via de serial0 poort en de nodige data wordt opgeslagen op de SD-kaart. Intussen wordt ook data via MQTT opgezonden naar een afzonderlijke display die de grafiek van het lopende kwartier zichtbaar maakt samen met de vermogens, fasespanningen en fasestromen. De Raspberry Pi doet dus ook dienst als MQTT-server maar dat mag ook een afzonderlijke server zijn.
+
+De Belgium Smart Meter BSMR, gebaseerd op de Dutch Smart Meter Requirements of DSMR, mits aangepaste parameters. Zie document "e-MUCS_P1_Ed_1_4".
 
 Dit project bestaat uit verschillende onderdelen die moeten samenwerken. 
 NOTA:
