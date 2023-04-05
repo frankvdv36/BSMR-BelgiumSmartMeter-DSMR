@@ -13,14 +13,14 @@ DEEL1:
 
 
 Iedere SmartTeller heeft een P1 aansluiting RJ12 (6 geleiders) waarop onze RPI wordt aangesloten via een kleine aanpassing naar Serial0. Schema zie "Aanpassing P1-RJ12"
-Die data noemen we een telegram en komt iedere seconde uit de P1 connector met een snelheid 115200. Telegrammen worden binnengenomen in een Raspberry Pi via de serial0. Het programma "BSMR8.py" verrwerkt deze data. Dit betekent: neemt de nodige data uit de telegram en verwerkt die zodat deze bruikbaar worden om grafieken te maken en belastingen te schakelen.
+Die data noemen we een telegram en komt iedere seconde uit de P1 connector met een snelheid 115200. Telegrammen worden binnengenomen in een Raspberry Pi via de serial0. Het programma "BSMR9.py" verwerkt deze data. Dit betekent: neemt de nodige data uit de telegram en verwerkt die zodat deze bruikbaar worden om grafieken te maken en belastingen te schakelen.
 
 DEEL2:
 
 
-Een tweede deel bestaat uit een ESP32 en een Nextion HMI-dispaly die draadloos de nuttige gegevens zichtbaar maaken alook een grafiek rond het kwartierverloop. Hiervoor is het Arduino programma "keuken_grafiek_vdv6" en display programma "NewGrafiekNum1PageV2.HMI" van toepassing. Het eerste wordt in een ESP32 geplaatst en het tweede is het formateren van de display in de gewenste layout. De display is van het type Nextion NX3224K028. Om dit te doen is een aangepast programma nodig die moet geinstallerd worden van Nextion https://nextion.tech/nextion-editor/#_section1
+Een tweede deel bestaat uit een ESP32 en een Nextion HMI-dispaly NX3224K028 die draadloos de nuttige gegevens zichtbaar maken alook een grafiek rond het kwartierverloop. Hiervoor is het Arduinoprogramma "keuken_grafiek_vdv8.ino" en display programma "NewGrafiekNum2PageV4.HMI" van toepassing. Het eerste wordt in een ESP32 geplaatst en het tweede is het formateren van de display in de gewenste layout. De display is van het type Nextion NX3224K028 met een 2.8" scherm. Om dit te doen is een aangepast programma nodig die moet geinstallerd worden van Nextion https://nextion.tech/nextion-editor/#_section1
 
-Wie niet wenst te werken met de display kan de grafiek ook bekomen op het scherm van de Raspberry Pi door "BSMRplotData1.py" te laten lopen. Deze kijkt naar de file "forcast.csv" die "BSMR8.py" genereerde en plot deze op het scherm.
+Wie niet wenst te werken met de display kan de grafiek ook bekomen op het scherm van de Raspberry Pi door "BSMRplotData1.py" te laten lopen. Deze kijkt naar de file "forcast.csv" die "BSMR9.py" genereerde en plot deze op het scherm.
 
 
 
